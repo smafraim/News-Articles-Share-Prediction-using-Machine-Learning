@@ -30,6 +30,12 @@ The dataset comprises news articles and their associated attributes, such as tit
    - Text cleaning
    - Feature extraction
    - Handling missing data
+   - Categorical Data Cleaning
+   - Using Regex Library
+   - Univariate Data Analysis
+   - Multivariate Data Analysis
+   - Outlier Treatment
+
 3. **Exploratory Data Analysis (EDA)**
    - Understand data distributions
    - Identify correlations
