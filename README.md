@@ -1,1 +1,1 @@
-# News-Articles-Share-Prediction-using-Machine-Learning
+# News Articles Share Prediction using Machine Learning
