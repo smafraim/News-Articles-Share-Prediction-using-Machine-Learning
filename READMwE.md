@@ -100,14 +100,17 @@ modular_code_news_article\
 │   ├── news_shares_modelcorrected.sav
 │   ├── new_news_share.pkl
 │   └── Preventing data leakage and creating a test dataset.ipynb
-│
+
+
 ├── ML_pipelines\
 │   ├── model_training.py
 │   ├── preprocessing.py
 │   └── utils.py
-│
+
+
 ├── output\
-│
+
+
 ├── source\
 │   ├── _static\
 │   │
@@ -115,14 +118,15 @@ modular_code_news_article\
 │   │
 │   ├── conf.py
 │   └── index.rst
-│
+
+
 ├── templates\
 │   └── homepage.html
-│
+
 ├── __pycache__\
 │   ├── app.cpython-38.pyc
 │   └── news_articles_features.cpython-38.pyc
-│
+
 ├── app.py
 ├── make.bat
 ├── Makefile
