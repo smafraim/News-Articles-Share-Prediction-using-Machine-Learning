@@ -1,0 +1,31 @@
+name: Generate Directory Tree
+on:
+  push:
+    branches:
+      - main  # Adjust this branch name if necessary
+
+jobs:
+  generate-directory-tree:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Generate Directory Tree
+        run: |
+          git clone https://github.com/ekalinin/github-markdown-toc
+          cd github-markdown-toc
+          ./gh-md-toc --insert README.md
+          mv -f TOC.md $GITHUB_WORKSPACE/TOC.md
+          cd ..
+          rm -rf github-markdown-toc
+
+      - name: Commit Directory Tree
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@users.noreply.github.com'
+          git add TOC.md
+          git commit -m "Auto-generate directory tree"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
