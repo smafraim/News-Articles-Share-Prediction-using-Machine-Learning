@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="static\css\style.css">
+<script src="\static\css\work.js"></script>
+
+</head>
+
+<body>
+ <div class="login">
+	<h1>Predict your shares of your News Articles</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+ <!-- <form action="{{ url_for('predict')}}"method="post"> -->
+    	<input type="text" name="ncc" placeholder="Now cast Concentraion" required="required" />
+        <input type="text" name="aqi" placeholder="AQI" required="required" />
+        <input type="text" name="month" placeholder="month" required="required" />
+        <input type="text" name="day" placeholder="day" required="required" />
+		      
+    <!-- Button container -->
+    <div class="button-container">
+      <!-- Predict button -->
+      <button class="button-56" role="button">Predict</button>
+
+      <!-- Refresh button -->
+      <button class="button-56" role="button" id="refresh-button">Refresh</button>
+  </div>
+        <br>
+        <br>
+        <h3>  {{ prediction }} </h3>
+        
+    </div>
+    </form>
+
+
+    
+
+    <!-- Your script tags and other content here -->
+
+    <script>
+        // JavaScript code for handling the refresh button click
+        document.getElementById('refresh-button').addEventListener('click', function() {
+            window.location.href = '/'; // Redirect to the home page
+        });
+    </script>
+<!--
+<script>
+    document.querySelector('form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission to prevent page refresh
+      });
+</script>
+!-->
+
+</body>
+</html>
